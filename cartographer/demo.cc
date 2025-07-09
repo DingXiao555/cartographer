@@ -30,7 +30,35 @@ int main() {
 
   // 2. 加载Lua配置
   auto lua_config = std::make_unique<common::LuaParameterDictionary>(
-    "return{}"
+    R"(
+    return {
+      trajectory_builder = {
+        use_3d = true,
+        trajectory_builder_3d = {
+          num_accumulated_range_data = 1,
+          voxel_filter_size = 0.15,
+          submaps = {
+            high_resolution = 0.25,
+            low_resolution = 0.6,
+            num_range_data = 100,
+          },
+          ceres_pose_gravity_alignment = false,
+          motion_filter = {
+            max_time_seconds = 30,
+            max_distance_meters = 0.3,
+            max_angle_radians = math.rad(2),
+          },
+        },
+      },
+      pose_graph = {
+        optimize_every_n_nodes = 50,
+        constraint_builder = {
+          sampling_ratio = 0.3,
+          max_constraint_distance = 15,
+        },
+      },
+    }
+  )", 
     std::make_unique<common::ConfigurationFileResolver>()
 );
 
