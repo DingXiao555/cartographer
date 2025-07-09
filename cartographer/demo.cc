@@ -6,6 +6,7 @@
 #include "cartographer/mapping/proto/map_builder_options.pb.h"
 #include "cartographer/sensor/timed_point_cloud_data.h"
 #include "cartographer/common/lua_parameter_dictionary.h"
+#include "cartographer/common/configuration_file_resolver.h"  // 新增头文件
 
 
 using namespace cartographer;
@@ -59,7 +60,7 @@ int main() {
       },
     }
   )", 
-    std::make_unique<common::file::ConfigurationFileResolver>()
+    std::make_unique<common::ConfigurationFileResolver>()
 );
 
   // 3. 添加轨迹
