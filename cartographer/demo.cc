@@ -65,10 +65,10 @@ int main() {
 
   // 3. 添加轨迹
   const auto sensor_id = mapping::proto::SensorId{  // 修正命名空间
-      mapping::proto::SensorType::RANGE, "velodyne"};
+      mapping::proto::SensorId::RANGE, "velodyne"};
   const int trajectory_id = map_builder->AddTrajectoryBuilder(
       {sensor_id},
-      map_builder->trajectory_builder_options());  // 修正方法名
+      map_builder->GetAllTrajectoryBuilderOptions());  // 修正方法名
 
   // 4. 处理数据
   std::ifstream fin("velodyne_data.bin", std::ios::binary);
