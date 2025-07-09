@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../cartographer/common/configuration_file_resolver.h
-vector
--
-cartographer/common/lua_parameter_dictionary.h
-../cartographer/common/cartographer/common/lua_parameter_dictionary.h
-cartographer/common/port.h
-../cartographer/common/cartographer/common/port.h
-
 ../cartographer/common/fixed_ratio_sampler.h
 string
 -
@@ -581,14 +573,6 @@ cartographer/mapping/internal/2d/scan_matching/correlative_scan_matcher_2d.h
 ../cartographer/mapping/internal/2d/scan_matching/cartographer/mapping/internal/2d/scan_matching/correlative_scan_matcher_2d.h
 cartographer/mapping/proto/scan_matching/real_time_correlative_scan_matcher_options.pb.h
 ../cartographer/mapping/internal/2d/scan_matching/cartographer/mapping/proto/scan_matching/real_time_correlative_scan_matcher_options.pb.h
-
-../cartographer/mapping/internal/3d/local_slam_result_3d.h
-cartographer/mapping/internal/local_slam_result_data.h
-../cartographer/mapping/internal/3d/cartographer/mapping/internal/local_slam_result_data.h
-cartographer/mapping/internal/submap_controller.h
-../cartographer/mapping/internal/3d/cartographer/mapping/internal/submap_controller.h
-cartographer/mapping/trajectory_builder_interface.h
-../cartographer/mapping/internal/3d/cartographer/mapping/trajectory_builder_interface.h
 
 ../cartographer/mapping/internal/3d/local_trajectory_builder_3d.h
 chrono
@@ -1626,44 +1610,6 @@ cartographer/transform/rigid_transform.h
 cartographer/transform/timestamped_transform.h
 ../cartographer/transform/cartographer/transform/timestamped_transform.h
 
-/home/dx/code/cartographer/cartographer/io/serialization_format_migration.cc
-cartographer/io/serialization_format_migration.h
-/home/dx/code/cartographer/cartographer/io/cartographer/io/serialization_format_migration.h
-vector
--
-cartographer/common/config.h
-/home/dx/code/cartographer/cartographer/io/cartographer/common/config.h
-cartographer/common/configuration_file_resolver.h
-/home/dx/code/cartographer/cartographer/io/cartographer/common/configuration_file_resolver.h
-cartographer/common/lua_parameter_dictionary.h
-/home/dx/code/cartographer/cartographer/io/cartographer/common/lua_parameter_dictionary.h
-cartographer/common/thread_pool.h
-/home/dx/code/cartographer/cartographer/io/cartographer/common/thread_pool.h
-cartographer/io/internal/mapping_state_serialization.h
-/home/dx/code/cartographer/cartographer/io/cartographer/io/internal/mapping_state_serialization.h
-cartographer/io/proto_stream_deserializer.h
-/home/dx/code/cartographer/cartographer/io/cartographer/io/proto_stream_deserializer.h
-cartographer/mapping/3d/submap_3d.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/3d/submap_3d.h
-cartographer/mapping/id.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/id.h
-cartographer/mapping/internal/3d/pose_graph_3d.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/internal/3d/pose_graph_3d.h
-cartographer/mapping/internal/3d/scan_matching/rotational_scan_matcher.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/internal/3d/scan_matching/rotational_scan_matcher.h
-cartographer/mapping/map_builder_interface.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/map_builder_interface.h
-cartographer/mapping/pose_graph.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/pose_graph.h
-cartographer/mapping/probability_values.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/probability_values.h
-cartographer/mapping/proto/map_builder_options.pb.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/proto/map_builder_options.pb.h
-cartographer/mapping/proto/trajectory_builder_options.pb.h
-/home/dx/code/cartographer/cartographer/io/cartographer/mapping/proto/trajectory_builder_options.pb.h
-glog/logging.h
-/home/dx/code/cartographer/cartographer/io/glog/logging.h
-
 /home/dx/code/cartographer/cartographer/mapping/internal/2d/local_slam_result_2d.cc
 cartographer/mapping/internal/2d/local_slam_result_2d.h
 /home/dx/code/cartographer/cartographer/mapping/internal/2d/cartographer/mapping/internal/2d/local_slam_result_2d.h
@@ -1713,12 +1659,6 @@ cartographer/transform/transform.h
 /home/dx/code/cartographer/cartographer/mapping/internal/2d/cartographer/transform/transform.h
 glog/logging.h
 /home/dx/code/cartographer/cartographer/mapping/internal/2d/glog/logging.h
-
-/home/dx/code/cartographer/cartographer/mapping/internal/3d/local_slam_result_3d.cc
-cartographer/mapping/internal/3d/local_slam_result_3d.h
-/home/dx/code/cartographer/cartographer/mapping/internal/3d/cartographer/mapping/internal/3d/local_slam_result_3d.h
-cartographer/mapping/internal/3d/pose_graph_3d.h
-/home/dx/code/cartographer/cartographer/mapping/internal/3d/cartographer/mapping/internal/3d/pose_graph_3d.h
 
 /home/dx/code/cartographer/cartographer/mapping/internal/3d/pose_graph_3d.cc
 cartographer/mapping/internal/3d/pose_graph_3d.h
@@ -2911,8 +2851,6 @@ assert.h
 /usr/include/lua5.3/lualib.h
 lua.h
 /usr/include/lua5.3/lua.h
-
-cartographer/common/config.h
 
 cartographer/common/proto/ceres_solver_options.pb.h
 string

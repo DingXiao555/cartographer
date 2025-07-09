@@ -161,7 +161,7 @@ class PoseGraph3D : public PoseGraph {
   // Waits until we caught up (i.e. nothing is waiting to be scheduled), and
   // all computations have finished.
   void WaitForAllComputations() 
-      (work_queue_mutex_);
+      ;
 
  private:
   MapById<SubmapId, SubmapData> GetSubmapDataUnderLock() const
@@ -169,7 +169,7 @@ class PoseGraph3D : public PoseGraph {
 
   // Handles a new work item.
   void AddWorkItem(const std::function<WorkItem::Result()>& work_item)
-       (work_queue_mutex_);
+       ;
 
   // Adds connectivity and sampler for a trajectory if it does not exist.
   void AddTrajectoryIfNeeded(int trajectory_id)
@@ -205,12 +205,12 @@ class PoseGraph3D : public PoseGraph {
 
   // Runs the optimization, executes the trimmers and processes the work queue.
   void HandleWorkQueue(const constraints::ConstraintBuilder3D::Result& result)
-       (work_queue_mutex_);
+       ;
 
   // Process pending tasks in the work queue on the calling thread, until the
   // queue is either empty or an optimization is required.
   void DrainWorkQueue() 
-      (work_queue_mutex_);
+      ;
 
   // Runs the optimization. Callers have to make sure, that there is only one
   // optimization being run at a time.
@@ -247,7 +247,7 @@ class PoseGraph3D : public PoseGraph {
 
   // If it exists, further work items must be added to this queue, and will be
   // considered later.
-  std::unique_ptr<WorkQueue> work_queue_ (work_queue_mutex_);
+  std::unique_ptr<WorkQueue> work_queue_ ;
 
   // We globally localize a fraction of the nodes from each trajectory.
   absl::flat_hash_map<int, std::unique_ptr<common::FixedRatioSampler>>
