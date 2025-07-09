@@ -59,7 +59,7 @@ int main() {
       },
     }
   )", 
-    std::make_unique<common::ConfigurationFileResolver>()
+    std::make_unique<common::file::ConfigurationFileResolver>()
 );
 
   // 3. 添加轨迹
