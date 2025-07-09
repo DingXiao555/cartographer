@@ -1729,8 +1729,12 @@
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/2d/submap_2d.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/3d
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/3d/range_data_inserter_3d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/3d/submap_3d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/detect_floors.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/imu_tracker.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/local_trajectory_builder_2d.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d/scan_matching
