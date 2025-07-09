@@ -64,16 +64,21 @@ int main() {
 );
 
   // 3. 添加轨迹
-  mapping::proto::SensorId sensor_id;
-  sensor_id.set_type(mapping::proto::SensorId::RANGE);
-  sensor_id.set_id("velodyne");
+  // 创建传感器ID
+  const std::string sensor_id = "velodyne";
   
+  // 创建传感器ID集合
   std::set<mapping::TrajectoryBuilderInterface::SensorId> sensor_ids;
-  sensor_ids.insert(mapping::TrajectoryBuilderInterface::SensorId{sensor_id.type(), sensor_id.id()});
+  sensor_ids.insert(mapping::TrajectoryBuilderInterface::SensorId{
+      mapping::TrajectoryBuilderInterface::SensorId::SensorType::RANGE, sensor_id});
+  
+  // 获取配置选项
+  mapping::proto::TrajectoryBuilderOptions trajectory_builder_options;
+  // 如果需要，可以在这里设置选项
   
   const int trajectory_id = map_builder->AddTrajectoryBuilder(
       sensor_ids,
-      map_builder_options.trajectory_builder_options(),
+      trajectory_builder_options,
       nullptr);  // 本例中不需要回调函数
 
   // 4. 处理数据
@@ -81,7 +86,7 @@ int main() {
   for (int frame = 0; frame < 100; ++frame) {
     sensor::TimedPointCloudData point_cloud = ReadPointCloudFromBin(fin);
     map_builder->GetTrajectoryBuilder(trajectory_id)->AddSensorData(
-        sensor_id.id(), point_cloud);  // 使用id()方法
+        sensor_id, point_cloud);  // 直接使用sensor_id字符串
   }
 
   // 5. 保存地图
