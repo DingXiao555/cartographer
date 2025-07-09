@@ -118,6 +118,174 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/common" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/common/config.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/common/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/common/proto/ceres_solver_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/ground_truth/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/ground_truth/proto/relations.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/cell_limits_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/connected_components.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/grid_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/grid_2d_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/hybrid_grid.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/local_trajectory_builder_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/local_trajectory_builder_options_3d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/map_builder_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/map_limits.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/motion_filter_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/normal_estimation_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/pose_extrapolator_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/pose_graph.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/pose_graph" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/pose_graph/constraint_builder_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/pose_graph" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/pose_graph/optimization_problem_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/pose_graph_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/probability_grid.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/probability_grid_range_data_inserter_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/range_data_inserter_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/range_data_inserter_options_3d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/scan_matching" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/scan_matching/ceres_scan_matcher_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/scan_matching" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/scan_matching/ceres_scan_matcher_options_3d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/scan_matching" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/scan_matching/fast_correlative_scan_matcher_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/scan_matching" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/scan_matching/fast_correlative_scan_matcher_options_3d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto/scan_matching" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/scan_matching/real_time_correlative_scan_matcher_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/serialization.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/submap.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/submap_visualization.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/submaps_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/submaps_options_3d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/trajectory.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/trajectory_builder_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/trajectory_node_data.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/tsdf_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/mapping/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/mapping/proto/tsdf_range_data_inserter_options_2d.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/sensor/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/sensor/proto/adaptive_voxel_filter_options.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/sensor/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/sensor/proto/sensor.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/transform/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/transform/proto/timestamped_transform.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/cartographer/transform/proto" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/cartographer/transform/proto/transform.pb.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cartographer/common" TYPE FILE FILES "/home/dx/code/cartographer/cartographer/common/configuration_file_resolver.h")
 endif()
 
