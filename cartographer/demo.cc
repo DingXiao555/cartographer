@@ -30,8 +30,9 @@ int main() {
 
   // 2. 加载Lua配置
   auto lua_config = std::make_unique<common::LuaParameterDictionary>(
-      "return {}",
-      std::make_unique<common::file::RuntimeFileWriterResolver>());  // 修正命名空间
+    "return{}"
+    std::make_unique<common::ConfigurationFileResolver>()
+);
 
   // 3. 添加轨迹
   const auto sensor_id = mapping::proto::SensorId{  // 修正命名空间
