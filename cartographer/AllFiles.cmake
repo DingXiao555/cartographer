@@ -1741,6 +1741,8 @@
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/ray_to_pixel_mask.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching/ceres_scan_matcher_2d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching/correlative_scan_matcher_2d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching/fast_correlative_scan_matcher_2d.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d/scan_matching
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/constraints

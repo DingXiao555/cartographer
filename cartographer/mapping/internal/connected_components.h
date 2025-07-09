@@ -70,9 +70,9 @@ class ConnectedComponents {
 
  private:
   // Find the representative and compresses the path to it.
-  int FindSet(int trajectory_id) EXCLUSIVE_LOCKS_REQUIRED(lock_);
+  int FindSet(int trajectory_id) ;
   void Union(int trajectory_id_a, int trajectory_id_b)
-      EXCLUSIVE_LOCKS_REQUIRED(lock_);
+      ;
 
   absl::Mutex lock_;
   // Tracks transitive connectivity using a disjoint set forest, i.e. each
