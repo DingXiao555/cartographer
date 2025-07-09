@@ -559,7 +559,7 @@ void PoseGraph3D::WaitForAllComputations() {
   // a WhenDone() callback.
   {
     const auto predicate = [this]()
-                               EXCLUSIVE_LOCKS_REQUIRED(work_queue_mutex_) {
+                                {
                                  return work_queue_ == nullptr;
                                };
     absl::MutexLock locker(&work_queue_mutex_);

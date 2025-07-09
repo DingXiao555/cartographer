@@ -1735,6 +1735,9 @@
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/local_trajectory_builder_2d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/local_trajectory_builder_options_2d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/normal_estimation_2d.cc.o
+#/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/overlapping_submaps_trimmer_2d.cc.o
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/2d/scan_matching
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d
 #/home/dx/code/cartographer/cartographer/CMakeFiles/cartographer.dir/mapping/internal/3d/scan_matching
