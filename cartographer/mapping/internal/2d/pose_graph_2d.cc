@@ -595,7 +595,7 @@ void PoseGraph2D::WaitForAllComputations() {
                                      result.end());
             notification = true;
           });
-  const auto predicate = [&notification]() EXCLUSIVE_LOCKS_REQUIRED(mutex_) {
+  const auto predicate = [&notification]()  {
     return notification;
   };
   while (!mutex_.AwaitWithTimeout(absl::Condition(&predicate),
