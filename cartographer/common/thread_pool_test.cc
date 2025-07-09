@@ -43,7 +43,7 @@ class Receiver {
   }
 
   absl::Mutex mutex_;
-  std::vector<int> received_numbers_ GUARDED_BY(mutex_);
+  std::vector<int> received_numbers_ ;
 };
 
 TEST(ThreadPoolTest, RunTask) {
