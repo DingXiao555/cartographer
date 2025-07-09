@@ -1,65 +1,39 @@
 #include <iostream>
-#include <vector>
 #include <fstream>
 #include <Eigen/Core>
 #include "cartographer/mapping/map_builder.h"
+#include "cartographer/mapping/proto/map_builder_options.pb.h"
 #include "cartographer/sensor/timed_point_cloud_data.h"
 
 using namespace cartographer;
 
-// 读取单个bin文件
-sensor::TimedPointCloudData ReadBinFile(const std::string& path, common::Time time) {
-  std::ifstream file(path, std::ios::binary);
-  std::vector<float> buffer(4);
-  sensor::TimedPointCloud points;
-
-  while (file.read(reinterpret_cast<char*>(buffer.data()), 4 * sizeof(float))) {
-    points.emplace_back(buffer[0], buffer[1], buffer[2]);  // 忽略反射强度
-  }
-
-  return sensor::TimedPointCloudData{
-      time,                   // 时间戳（需按帧递增）
-      Eigen::Vector3f::Zero(),// 坐标原点设为(0,0,0)
-      std::move(points)
-  };
-}
-
 int main() {
-  // 初始化建图器
-  auto map_builder = mapping::CreateMapBuilder();
+  // 1. 初始化MapBuilder
+  mapping::proto::MapBuilderOptions map_builder_options;
+  auto map_builder = mapping::CreateMapBuilder(map_builder_options);
 
-  // 加载配置
-  auto lua_config = common::LuaParameterDictionary::NonNativeHandle(
-      "../configuration_files/kitti_3d.lua",
-      {}  // 无额外参数
-  );
+  // 2. 加载Lua配置（示例为空配置）
+  auto lua_config = std::make_unique<common::LuaParameterDictionary>(
+      "return {}",  // 实际需填入有效Lua配置
+      std::make_unique<common::RuntimeFileWriterResolver>());
 
-  // 创建轨迹
+  // 3. 添加轨迹
+  const auto sensor_id = mapping::SensorId{
+      mapping::SensorType::RANGE, "velodyne"};
   const int trajectory_id = map_builder->AddTrajectoryBuilder(
-      {mapping::TrajectoryBuilderInterface::SensorId{
-          mapping::TrajectoryBuilderInterface::SensorType::RANGE, "velodyne"}},
-      lua_config.GetDictionary("trajectory_builder").get()
-  );
+      {sensor_id},
+      map_builder->CreateTrajectoryBuilderOptions(lua_config->GetDictionary("trajectory_builder").get()));
 
-  // 处理所有bin文件
-  common::Time current_time = common::FromUniversal(0);  // 时间起点
-  const double delta_time = 0.1;                         // 假设10Hz采样率
-
-  for (int frame = 0; ; ++frame) {
-    const std::string bin_path = fmt::format(
-        "../kitti_data/testing/velodyne/{:06d}.bin", frame);
-
-    if (!std::filesystem::exists(bin_path)) break;  // 文件不存在时退出
-
-    auto cloud_data = ReadBinFile(bin_path, current_time);
-    map_builder->GetTrajectoryBuilder(trajectory_id)
-        ->AddSensorData("velodyne", cloud_data);
-
-    current_time += common::FromSeconds(delta_time);
+  // 4. 处理数据循环
+  std::ifstream fin("velodyne_data.bin", std::ios::binary);
+  for (int frame = 0; frame < 100; ++frame) {
+    // 读取点云数据（需补充实际解析逻辑）
+    sensor::TimedPointCloudData point_cloud = ReadPointCloudFromBin(fin);
+    map_builder->GetTrajectoryBuilder(trajectory_id)->AddSensorData(
+        sensor_id.id, point_cloud);
   }
 
-  // 保存地图
-  map_builder->SerializeStateToFile(true, "../build/kitti_map.pbstream");
-  std::cout << "建图完成！结果保存至 build/kitti_map.pbstream" << std::endl;
+  // 5. 保存地图
+  map_builder->SerializeStateToFile(true, "kitti_map.pbstream");
   return 0;
 }
