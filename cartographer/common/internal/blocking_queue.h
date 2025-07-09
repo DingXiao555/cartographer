@@ -150,8 +150,8 @@ class BlockingQueue {
   }
 
   absl::Mutex mutex_;
-  const size_t queue_size_ (mutex_);
-  std::deque<T> deque_ (mutex_);
+  const size_t queue_size_ ;
+  std::deque<T> deque_ ;
 };
 
 }  // namespace common
