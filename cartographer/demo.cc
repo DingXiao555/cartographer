@@ -60,15 +60,21 @@ int main() {
       },
     }
   )", 
-    std::make_unique<common::ConfigurationFileResolver>()
+    std::make_unique<common::ConfigurationFileResolver>(std::vector<std::string>{})
 );
 
   // 3. 添加轨迹
-  const auto sensor_id = mapping::proto::SensorId{  // 修正命名空间
-      mapping::proto::SensorId::RANGE, "velodyne"};
+  mapping::proto::SensorId sensor_id;
+  sensor_id.set_type(mapping::proto::SensorId::RANGE);
+  sensor_id.set_id("velodyne");
+  
+  std::set<mapping::TrajectoryBuilderInterface::SensorId> sensor_ids;
+  sensor_ids.insert(mapping::TrajectoryBuilderInterface::SensorId{sensor_id.type(), sensor_id.id()});
+  
   const int trajectory_id = map_builder->AddTrajectoryBuilder(
-      {sensor_id},
-      map_builder->GetAllTrajectoryBuilderOptions());  // 修正方法名
+      sensor_ids,
+      map_builder_options.trajectory_builder_options(),
+      nullptr);  // 本例中不需要回调函数
 
   // 4. 处理数据
   std::ifstream fin("velodyne_data.bin", std::ios::binary);
