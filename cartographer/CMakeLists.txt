@@ -6,12 +6,12 @@ find_package(Cartographer REQUIRED)
 find_package(fmt REQUIRED)
 
 # 添加可执行文件
-add_executable(kitti_demo
-  kitti_demo.cc
+add_executable(cartographer_demo
+  demo.cc
 )
 
 # 链接库
-target_link_libraries(kitti_demo PRIVATE
+target_link_libraries(cartographer_demo PRIVATE
   Cartographer::mapping
   Cartographer::sensor
   Cartographer::common
