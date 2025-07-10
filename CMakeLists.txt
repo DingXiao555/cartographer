@@ -62,11 +62,8 @@ else()
   find_library(CAIRO_LIBRARIES cairo)
 endif()
 
-# Only build the documentation if we can find Sphinx.
-find_package(Sphinx)
-if(SPHINX_FOUND)
-  add_subdirectory("docs")
-endif()
+# Skip documentation build to avoid Python dependency issues
+set(SPHINX_FOUND false)
 
 # Install catkin package.xml
 install(FILES package.xml DESTINATION share/cartographer)
