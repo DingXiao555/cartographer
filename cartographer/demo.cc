@@ -77,15 +77,6 @@ int main(int argc, char** argv) {
   }
   
   // 2. 初始化MapBuilder（内部会创建线程池）
-  mapping::proto::MapBuilderOptions map_builder_options;
-  // 设置线程池大小
-  map_builder_options.set_num_background_threads(4);
-  // 设置使用3D轨迹构建器（因为KITTI数据集是3D点云）
-  map_builder_options.set_use_trajectory_builder_3d(true);
-  map_builder_options.set_use_trajectory_builder_2d(false);
-  auto map_builder = mapping::CreateMapBuilder(map_builder_options);
-  
-  // 3. 加载Lua配置
   auto lua_config = std::make_unique<common::LuaParameterDictionary>(
     R"(
     return {
@@ -286,6 +277,24 @@ int main(int argc, char** argv) {
     std::make_unique<common::ConfigurationFileResolver>(std::vector<std::string>{})
   );
 
+  // 确保pose_graph参数被正确使用
+  auto pose_graph_options_proto = mapping::CreatePoseGraphOptions(
+      lua_config->GetDictionary("pose_graph").get());
+
+  // 从Lua配置创建MapBuilder选项
+  mapping::proto::MapBuilderOptions map_builder_options;
+  map_builder_options.set_num_background_threads(4);
+  map_builder_options.set_use_trajectory_builder_3d(true);
+  map_builder_options.set_use_trajectory_builder_2d(false);
+  
+  // 设置pose_graph选项
+  *map_builder_options.mutable_pose_graph_options() = pose_graph_options_proto;
+  
+  // 创建MapBuilder
+  auto map_builder = mapping::CreateMapBuilder(map_builder_options);
+  
+  // 3. 使用已加载的Lua配置
+
   // 4. 添加轨迹
   // 创建传感器ID
   const std::string sensor_id = "velodyne";
@@ -314,11 +323,6 @@ int main(int argc, char** argv) {
         ->mutable_pose_extrapolator_options()
         ->mutable_constant_velocity();
   }
-  trajectory_builder_options.mutable_trajectory_builder_3d_options()
-      ->mutable_pose_extrapolator_options()
-      ->mutable_constant_velocity()
-      ->set_imu_gravity_time_constant(10.0);
-  // 确保imu_gravity_time_constant参数被设置
   trajectory_builder_options.mutable_trajectory_builder_3d_options()
       ->mutable_pose_extrapolator_options()
       ->mutable_constant_velocity()

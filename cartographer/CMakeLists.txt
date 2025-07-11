@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 project(kitti_cartographer_demo)
 
+# 设置Cartographer库的配置文件路径
+set(Cartographer_DIR /usr/local/share/cartographer)
+
 # 查找依赖项
 find_package(Cartographer REQUIRED)
+find_package(Boost REQUIRED COMPONENTS iostreams)
 
 # 添加可执行文件
 add_executable(cartographer_demo
@@ -11,9 +15,8 @@ add_executable(cartographer_demo
 
 # 链接库
 target_link_libraries(cartographer_demo PRIVATE
-  Cartographer::mapping
-  Cartographer::sensor
-  Cartographer::common
+  cartographer
+  Boost::iostreams
 )
 
 # 设置C++标准
